@@ -1,0 +1,44 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+	{% include 'shared/head.html' %}
+	<title>{% block title %}{{block.super}}{% endblock title %} | Katen</title>
+</head>
+
+<body>
+
+<!-- preloader -->
+{% include 'shared/preloader.html' %}
+
+<!-- site wrapper -->
+<div class="site-wrapper">
+
+	<div class="main-overlay"></div>
+
+	<!-- header -->
+	{% include 'shared/header.html' %}
+
+	{% block content %}
+	{% endblock content %}
+
+	<!-- footer -->
+	{% include 'shared/footer.html' %}
+
+</div><!-- end site wrapper -->
+
+<!-- search popup area -->
+{% include 'shared/search-popup.html' %}
+
+<!-- canvas menu -->
+{% include 'shared/canvas-menu.html' %}
+
+<!-- JAVA SCRIPTS -->
+{% include 'shared/scripts.html' %}
+
+</body>
+
+<!-- Mirrored from maanjaa.com/themeger/katen-demo/html/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 03 Jul 2021 05:08:47 GMT -->
+</html>
