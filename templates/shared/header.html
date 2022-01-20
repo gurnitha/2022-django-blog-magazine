@@ -1,4 +1,5 @@
 {% load static %}
+{% load show_menu %}
 
 	<header class="header-default">
 		<nav class="navbar navbar-expand-lg">
@@ -8,7 +9,7 @@
 
 				<div class="collapse navbar-collapse">
 					<!-- menus -->
-					{% include 'shared/tpl/menu_tpl.html' %}
+					{% show_menu %}
 				</div>
 
 				<!-- header right section -->

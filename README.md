@@ -70,3 +70,41 @@ https://github.com/gurnitha/2022-django-blog-magazine
         modified:   README.md
         new file:   apps/blog/templatetags/__init__.py
         new file:   apps/blog/templatetags/show_menu.py
+
+
+#### 5. MENU TEMPLATE TAGS Part 3 - Display menu
+
+        Steps:
+
+        1. Fetch menu items in menu_tpl.html using for loop
+        2. Load show_menu tamplate tags in header.html
+        3. Replace include menu_tpl.html in header.html with show_menu tags {% show_menu %}
+        4. Test it out
+
+        NOTE:
+
+        1. After loading the show_menu, you will get errors like this:
+
+            django.template.exceptions.TemplateSyntaxError: ''show_menu'' 
+            is not a registered tag library. Must be one of:
+
+            admin_list
+            admin_modify
+            admin_urls
+            cache
+            i18n
+            l10n
+            log
+            show_menu
+            static
+
+        2. To solve this problem, siply restart your server and refresh your browser
+
+        3. If there are many category menu in the db, the menu bar will look
+           so crowded.
+
+        4. NEXT > Limit the display of menu item, and the rest put in dropdown menu
+
+        modified:   README.md
+        modified:   templates/shared/header.html
+        modified:   templates/shared/tpl/menu_tpl.html
