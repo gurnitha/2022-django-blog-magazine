@@ -26,3 +26,18 @@ def show_menu():
 		'the_rest_categories':the_rest_categories
 	}
 	return context
+
+
+@register.inclusion_tag('shared/tpl/canvas_menu_tpl.html')
+def show_canvas_menu():
+	first_two_categories_for_canvas_menu = Category.objects.order_by('id')[0:2]
+	# print(canvas_menu) # <-- :)
+
+	the_rest_categories_for_canvas_menu = Category.objects.order_by('id')[2:10]
+	# print(first_two_categories_for_canvas_menu) # <-- :)
+
+	context = {
+		'first_two_categories_for_canvas_menu':first_two_categories_for_canvas_menu,
+		'the_rest_categories_for_canvas_menu':the_rest_categories_for_canvas_menu
+	}
+	return context

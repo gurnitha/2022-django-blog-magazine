@@ -142,3 +142,40 @@ https://github.com/gurnitha/2022-django-blog-magazine
         modified:   README.md
         modified:   apps/blog/templatetags/show_menu.py
         modified:   templates/shared/tpl/menu_tpl.html
+
+
+#### 8. MENU TEMPLATE TAGS (CANVAS MENU) Part 6 - Showing menu items to menu canvas
+
+        Steps:
+
+        1. The processes are the same as above.
+        2. Test it out :)
+
+        NOTE:
+
+        1. When used the show_menu function, it did not work
+        2. SOLUTION: Create another function: show_canvas_menu function
+           The rest are the same.
+        3. Testing result :)
+
+        IMPORTANT NOTE !!!:
+        -------------------
+
+        1. If menu items load and fetch from db to
+           menu section by using defining view in views.py
+           and render it via template: blog/post_list.html 
+           , the result will show only on the pages
+           using that template ( blog/post_list.html).
+
+        2. It will not show on about and contact pages.
+           Why? because they use a different template 
+           ( blog/about.html) or (blog/contact.html)
+
+           not use templatetags, menu will
+           not appears in about and contact pages
+
+        modified:   README.md
+        modified:   apps/blog/templatetags/show_menu.py
+        modified:   templates/shared/canvas-menu.html
+        new file:   templates/shared/tpl/canvas_menu_tpl.html
+

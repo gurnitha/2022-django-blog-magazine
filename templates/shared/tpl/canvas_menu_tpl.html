@@ -1,0 +1,25 @@
+{% load static %}
+
+		<ul class="vertical-menu">
+			<li class="active">
+				<a href="index.html">Home</a>
+			</li>
+			
+			{% for category in first_two_categories_for_canvas_menu %}
+			<li class="nav-item">
+				<a class="nav-link" href="{% url 'blog:post_single' %}">{{category.category_name}}</a>
+			</li>
+			{% endfor %}
+
+			<li>
+				<a href="#">Categories</a>
+				<ul class="submenu">
+					{% for rest_category in the_rest_categories_for_canvas_menu %}
+					<li><a href="category.html">{{rest_category.category_name}}</a></li>
+					{% endfor %}
+				</ul>
+			</li>
+
+			<li><a href="about.html">About</a></li>
+			<li><a href="contact.html">Contact</a></li>
+		</ul>

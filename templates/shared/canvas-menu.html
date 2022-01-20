@@ -1,4 +1,5 @@
 {% load static %}
+{% load show_menu %}
 
 <div class="canvas-menu d-flex align-items-end flex-column">
 	<!-- close button -->
@@ -11,15 +12,7 @@
 
 	<!-- menu -->
 	<nav>
-		<ul class="vertical-menu">
-			<li class="active">
-				<a href="{% url 'blog:post_list' %}">Home</a>
-			</li>
-			<li><a href="{% url 'blog:post_single' %}">Lifestyle</a></li>
-			<li><a href="{% url 'blog:post_single' %}">Inspiration</a></li>
-			<li><a href="{% url 'blog:about' %}">About</a></li>
-			<li><a href="{% url 'blog:contact' %}">Contact</a></li>
-		</ul>
+		{% show_canvas_menu %}
 	</nav>
 
 	<!-- social icons -->
