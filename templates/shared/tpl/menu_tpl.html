@@ -4,11 +4,23 @@
 						<li class="nav-item active">
 							<a class="nav-link" href="{% url 'blog:post_list' %}">Home</a>
 						</li>
-						{% for category in first_three_categories %}
+						{% for category in first_two_categories %}
 						<li class="nav-item">
 							<a class="nav-link" href="{% url 'blog:post_single' %}">{{category.category_name}}</a>
 						</li>
 						{% endfor %}
+
+						
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="#">Categories</a>
+							<ul class="dropdown-menu">
+								{% for rest_category in the_rest_categories %}
+								<li><a class="dropdown-item" href="category.html">{{rest_category.category_name}}</a></li>
+								{% endfor %}
+							</ul>
+						</li>
+						
+
 						<li class="nav-item">
 							<a class="nav-link" href="{% url 'blog:about' %}">About</a>
 						</li>

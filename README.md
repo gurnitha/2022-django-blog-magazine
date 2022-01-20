@@ -110,7 +110,7 @@ https://github.com/gurnitha/2022-django-blog-magazine
         modified:   templates/shared/tpl/menu_tpl.html
 
 
-#### 6. MENU TEMPLATE TAGS Part 4 - Limit the menu item by showing last 3 menu item 
+#### 6. MENU TEMPLATE TAGS Part 4 - Limit the menu item by showing last 2 menu item 
 
         Steps:
 
@@ -123,6 +123,21 @@ https://github.com/gurnitha/2022-django-blog-magazine
         2. But there are some items do not show
 
         NEXT> Showing the rest items in dropdown menu
+
+        modified:   README.md
+        modified:   apps/blog/templatetags/show_menu.py
+        modified:   templates/shared/tpl/menu_tpl.html
+
+
+#### 7. MENU TEMPLATE TAGS Part 5 - Showing the rest of the menu items in dropdown menu
+
+        Steps:
+
+        1. In show_menu.py load the rest of menu items
+        2. In show_menu.py modify first_three_categories to first_two_categories
+           and modify the loop in menu_tpl.html accordingly.
+        3. In menu_tpl.html fetch and loop the rest of menu item
+        4. Test it out :)
 
         modified:   README.md
         modified:   apps/blog/templatetags/show_menu.py
