@@ -14,12 +14,20 @@ from apps.blog.models import Post
 class PostList(ListView):
 	model 				= Post 
 	template_name 		= 'blog/post_list.html'
-	context_object_name = 'posts'
+	context_object_name = 'post_list'
 
-	def get_context_data(self, *, object_list=None, **kwargs):
+	def get_context_data(self, **kwargs):
+		# To get contex, first, call base implementation
 		context = super().get_context_data(**kwargs)
+		# Load post by featured and the category it belongs to
+		context['post_featured'] = Post.objects.filter(post_type='featured')
 		context['title'] = 'Blog Magazine'
 		return context
+
+	# def get_context_data(self, *, object_list=None, **kwargs):
+	# 	context = super().get_context_data(**kwargs)
+	# 	context['title'] = 'Blog Magazine'
+	# 	return context
 
 
 def PostSingle(request):
