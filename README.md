@@ -108,3 +108,22 @@ https://github.com/gurnitha/2022-django-blog-magazine
         modified:   README.md
         modified:   templates/shared/header.html
         modified:   templates/shared/tpl/menu_tpl.html
+
+
+#### 6. MENU TEMPLATE TAGS Part 4 - Limit the menu item by showing last 3 menu item 
+
+        Steps:
+
+        1. Modify show_menu function to show only 3 menu items
+        2. Modify menu_tpl by showing about and contact menu
+
+        NOTE:
+
+        1. For now, only 3 menu items showed.
+        2. But there are some items do not show
+
+        NEXT> Showing the rest items in dropdown menu
+
+        modified:   README.md
+        modified:   apps/blog/templatetags/show_menu.py
+        modified:   templates/shared/tpl/menu_tpl.html

@@ -4,9 +4,15 @@
 						<li class="nav-item active">
 							<a class="nav-link" href="{% url 'blog:post_list' %}">Home</a>
 						</li>
-						{% for category in menu_category %}
+						{% for category in first_three_categories %}
 						<li class="nav-item">
 							<a class="nav-link" href="{% url 'blog:post_single' %}">{{category.category_name}}</a>
 						</li>
 						{% endfor %}
+						<li class="nav-item">
+							<a class="nav-link" href="{% url 'blog:about' %}">About</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="{% url 'blog:contact' %}">Contact</a>
+						</li>
 					</ul>
