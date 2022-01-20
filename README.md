@@ -56,3 +56,17 @@ https://github.com/gurnitha/2022-django-blog-magazine
         modified:   README.md
         modified:   templates/shared/header.html
         new file:   templates/shared/tpl/menu_tpl.html
+
+
+#### 4. MENU TEMPLATE TAGS Part 2 - Create show_menu function
+
+        Steps:
+
+        1. Create folder                : apps/blog/templatetags
+        2. Create init files            : apps/blog/templatetags/__init__.py
+        3. Create show_menu template    : apps/blog/templatetags/show_menu.py
+        4. Define show_menu function    : apps/blog/templatetags/show_menu.py
+
+        modified:   README.md
+        new file:   apps/blog/templatetags/__init__.py
+        new file:   apps/blog/templatetags/show_menu.py
