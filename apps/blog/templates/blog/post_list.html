@@ -30,7 +30,7 @@
 							</div>
 							<a href="blog-single.html">
 								<div class="thumb rounded">
-									<div class="inner data-bg-image" data-bg-image="{% static 'images/posts/featured-lg.jpg' %}"></div>
+									<div class="inner data-bg-image" data-bg-image="{{featured.post_thumbnail.url}}"></div>
 								</div>
 							</a>
 							{% endfor %}
@@ -47,82 +47,46 @@
 
 					<!-- post tabs -->
 					<div class="post-tabs rounded bordered">
+
 						<!-- tab navs -->
 						<ul class="nav nav-tabs nav-pills nav-fill" id="postsTab" role="tablist">
 							<li class="nav-item" role="presentation"><button aria-controls="popular" aria-selected="true" class="nav-link active" data-bs-target="#popular" data-bs-toggle="tab" id="popular-tab" role="tab" type="button">Popular</button></li>
 							<li class="nav-item" role="presentation"><button aria-controls="recent" aria-selected="false" class="nav-link" data-bs-target="#recent" data-bs-toggle="tab" id="recent-tab" role="tab" type="button">Recent</button></li>
 						</ul>
+
 						<!-- tab contents -->
 						<div class="tab-content" id="postsTabContent">
 							<!-- loader -->
 							<div class="lds-dual-ring"></div>
+
 							<!-- popular posts -->
 							<div aria-labelledby="popular-tab" class="tab-pane fade show active" id="popular" role="tabpanel">
 								<!-- post -->
+								{% if post_popular %}
+									{% for popular in post_popular %}
+									<div class="post post-list-sm circle">
+										<div class="thumb circle">
+											<a href="blog-single.html">
+												<div class="inner">
+													<img src="{{popular.post_thumbnail.url}}" alt="post-title" />
+												</div>
+											</a>
+										</div>
+										<div class="details clearfix">
+											<h6 class="post-title my-0"><a href="blog-single.html">{{popular.post_title}}</a></h6>
+											<ul class="meta list-inline mt-1 mb-0">
+												<li class="list-inline-item">{{popular.post_publish}}</li>
+											</ul>
+										</div>
+									</div>
+									{% endfor %}
+								{% else %}
 								<div class="post post-list-sm circle">
-									<div class="thumb circle">
-										<a href="blog-single.html">
-											<div class="inner">
-												<img src="{% static 'images/posts/tabs-1.jpg' %}" alt="post-title" />
-											</div>
-										</a>
-									</div>
-									<div class="details clearfix">
-										<h6 class="post-title my-0"><a href="blog-single.html">3 Easy Ways To Make Your iPhone Faster</a></h6>
-										<ul class="meta list-inline mt-1 mb-0">
-											<li class="list-inline-item">29 March 2021</li>
-										</ul>
-									</div>
+									<p class="post-title" style="color:#FE7F7D;">No popular posts found</p>
 								</div>
-								<!-- post -->
-								<div class="post post-list-sm circle">
-									<div class="thumb circle">
-										<a href="blog-single.html">
-											<div class="inner">
-												<img src="{% static 'images/posts/tabs-2.jpg' %}" alt="post-title" />
-											</div>
-										</a>
-									</div>
-									<div class="details clearfix">
-										<h6 class="post-title my-0"><a href="blog-single.html">An Incredibly Easy Method That Works For All</a></h6>
-										<ul class="meta list-inline mt-1 mb-0">
-											<li class="list-inline-item">29 March 2021</li>
-										</ul>
-									</div>
-								</div>
-								<!-- post -->
-								<div class="post post-list-sm circle">
-									<div class="thumb circle">
-										<a href="blog-single.html">
-											<div class="inner">
-												<img src="{% static 'images/posts/tabs-3.jpg' %}" alt="post-title" />
-											</div>
-										</a>
-									</div>
-									<div class="details clearfix">
-										<h6 class="post-title my-0"><a href="blog-single.html">10 Ways To Immediately Start Selling Furniture</a></h6>
-										<ul class="meta list-inline mt-1 mb-0">
-											<li class="list-inline-item">29 March 2021</li>
-										</ul>
-									</div>
-								</div>
-								<!-- post -->
-								<div class="post post-list-sm circle">
-									<div class="thumb circle">
-										<a href="blog-single.html">
-											<div class="inner">
-												<img src="{% static 'images/posts/tabs-4.jpg' %}" alt="post-title" />
-											</div>
-										</a>
-									</div>
-									<div class="details clearfix">
-										<h6 class="post-title my-0"><a href="blog-single.html">15 Unheard Ways To Achieve Greater Walker</a></h6>
-										<ul class="meta list-inline mt-1 mb-0">
-											<li class="list-inline-item">29 March 2021</li>
-										</ul>
-									</div>
-								</div>
+								{% endif %}
 							</div>
+							
 							<!-- recent posts -->
 							<div aria-labelledby="recent-tab" class="tab-pane fade" id="recent" role="tabpanel">
 								<!-- post -->
@@ -190,6 +154,7 @@
 									</div>
 								</div>
 							</div>
+
 						</div>
 					</div>
 				</div>

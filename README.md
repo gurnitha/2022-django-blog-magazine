@@ -204,3 +204,17 @@ https://github.com/gurnitha/2022-django-blog-magazine
         modified:   README.md
         modified:   apps/blog/templates/blog/post_list.html
         modified:   apps/blog/views.py
+
+
+#### 10. USING CBV - Load post by popular
+
+        modified:   README.md
+        modified:   apps/blog/templates/blog/post_list.html
+        modified:   apps/blog/views.py
+        new file:   media/photos/2022/01/20/editor-sm-1.jpg
+        ...
+        new file:   media/photos/2022/01/20/tabs-3.jpg
+
+        NOTE:
+
+        Steps: same as above

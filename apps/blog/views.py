@@ -21,6 +21,8 @@ class PostList(ListView):
 		context = super().get_context_data(**kwargs)
 		# Load post by featured and the category it belongs to
 		context['post_featured'] = Post.objects.filter(post_type='featured')
+		# Load post by popular
+		context['post_popular'] = Post.objects.filter(post_type='popular')
 		context['title'] = 'Blog Magazine'
 		return context
 
