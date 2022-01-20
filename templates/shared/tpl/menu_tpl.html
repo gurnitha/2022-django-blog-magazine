@@ -1,0 +1,19 @@
+{% load static %}
+
+					<ul class="navbar-nav mr-auto">
+						<li class="nav-item active">
+							<a class="nav-link" href="{% url 'blog:post_list' %}">Home</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="{% url 'blog:post_single' %}">Lifestyle</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="{% url 'blog:post_single' %}">Inspiration</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="{% url 'blog:about' %}">About</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="{% url 'blog:contact' %}">Contact</a>
+						</li>
+					</ul>

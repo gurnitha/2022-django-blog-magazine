@@ -41,3 +41,18 @@ https://github.com/gurnitha/2022-django-blog-magazine
         modified:   apps/accounts/models.py
         modified:   apps/blog/admin.py
         modified:   apps/blog/models.py
+
+
+#### 3. MENU TEMPLATE TAGS Part 1 - Create menu template and include
+
+        Steps:
+
+        1. Create a new folder  : templates/shared/tpl
+        2. Create a new file    : templates/shared/tpl/menu_tpl.html
+        3. Move menu list from share/header.html to menu_tpl.html
+        4. Include menu_tpl.html in header.html
+
+
+        modified:   README.md
+        modified:   templates/shared/header.html
+        new file:   templates/shared/tpl/menu_tpl.html
