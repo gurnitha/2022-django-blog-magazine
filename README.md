@@ -218,3 +218,14 @@ https://github.com/gurnitha/2022-django-blog-magazine
         NOTE:
 
         Steps: same as above
+
+
+#### 11. USING CBV - Load post by recent
+
+        modified:   README.md
+        modified:   apps/blog/templates/blog/post_list.html
+        modified:   apps/blog/views.py
+
+        NOTE:
+
+        Steps: same as above

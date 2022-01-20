@@ -23,6 +23,8 @@ class PostList(ListView):
 		context['post_featured'] = Post.objects.filter(post_type='featured')
 		# Load post by popular
 		context['post_popular'] = Post.objects.filter(post_type='popular')
+		# Load post by recent
+		context['post_recent'] = Post.objects.filter(post_type='recent')
 		context['title'] = 'Blog Magazine'
 		return context
 
