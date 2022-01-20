@@ -32,3 +32,12 @@ https://github.com/gurnitha/2022-django-blog-magazine
         modified:   README.md
 
         NOTE: Static files are ignored by git
+
+
+#### 2. Create Category, Tag, Post and Author models
+
+        modified:   README.md
+        modified:   apps/accounts/admin.py
+        modified:   apps/accounts/models.py
+        modified:   apps/blog/admin.py
+        modified:   apps/blog/models.py
